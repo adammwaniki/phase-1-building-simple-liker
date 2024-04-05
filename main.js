@@ -13,7 +13,8 @@ likeElement.textContent = EMPTY_HEART;
 mimicServerCall().then(() => {
 
 }).catch((error) => {
-  console.error(error);
+    const errorMessage = document.getElementById("modal-message");
+    errorMessage.textContent = error;
 });
 
 //creating the on click event listener
